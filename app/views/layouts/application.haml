@@ -1,0 +1,30 @@
+!!!
+%html
+  %head
+    %meta{ charset: 'utf-8' }
+    %meta{ name: 'viewport', content: 'width=1200' }
+    %title cinek.co
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+    /[if lt IE 9]
+      %script{ src: 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js' }
+      %script{ src: 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js' }
+
+  %body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+
+          .masthead.clearfix
+            .inner
+              %h3.masthead-brand cinek.com
+              %nav
+                %ul.nav.masthead-nav
+                  %li.active= link_to 'Home', '#'
+
+          = yield
+          .mastfoot
+            .inner
+              %p cinek.co
