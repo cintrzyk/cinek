@@ -13,3 +13,7 @@ gem 'spring', group: :development
 gem 'bootstrap-sass'
 gem 'netguru_bootstrapper'
 gem 'haml'
+
+group :test do
+  gem 'rspec-rails'
+end
