@@ -13,7 +13,14 @@ gem 'spring', group: :development
 gem 'bootstrap-sass'
 gem 'netguru_bootstrapper'
 gem 'haml'
+gem 'capistrano', '~> 3.1'
+gem 'capistrano-rails'
+gem 'capistrano-rbenv', '~> 2.0'
 
 group :test do
   gem 'rspec-rails'
+end
+
+group :production do
+  gem 'unicorn'
 end
